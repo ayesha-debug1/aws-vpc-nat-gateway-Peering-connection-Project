@@ -26,10 +26,11 @@
 10. Configure security groups to allow the required traffic between the EC2 instances.
 11. Test connectivity between the instances using their private IP addresses.
 
+<br>
 
 ## Testing and results 
 
-| Test | Description | Result |
+| Step | Description | Result |
 |------|-------------|--------|
 | 1 | Added a default route to the Internet Gateway in one route table and associated the public subnet. | [View screenshot](screenshots/VPC-1-routetable-igw.png) |
 | 2 | Created a custom route table with a default route to the NAT Gateway and associated the private subnet. | [View screenshot](screenshots/VPC-1-routetable-nat.png) |
@@ -41,7 +42,11 @@
 | 8 | Tested private connectivity between EC2 instances in the two VPCs using their private IP addresses. | [View screenshot](screenshots/peering-connection-testing.png) |
 
 
+<br>
 
+## CONCLUSION
+<br>
+This project demonstrated how to configure AWS VPC networking using public and private subnets, an Internet Gateway, a NAT Gateway, and VPC Peering. Outbound internet connectivity for private EC2 instances and private communication between two VPCs were tested through appropriate routing and security configurations. The project provided practical experience in AWS networking, traffic routing, and secure communication between cloud resources.
 
 
 
