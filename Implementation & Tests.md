@@ -29,14 +29,16 @@
 
 ## Testing and results 
 
-1.Added IGW rule to the default route table and associated a subnet, making it a public subnet
-2.Created custom route table under same vpc and added nat gateway rule and associated subnet , making it a private subnet
-3.created nategateway 
-4.tested natgateway connection by ssh to private server, ping and then internet connectivity
-5.configured peering connection with the requester and accepter vpc
-6.added peering connection rule to route table of vpc 1 with other vpc IP
-7.added peering connection rule to the route table of vpc 2 with other VPC ip
-8.tested peering connection from one ec2 to another 
+| Test | Description | Result |
+|------|-------------|--------|
+| 1 | Added a default route to the Internet Gateway in one route table and associated the public subnet. | [View screenshot](screenshots/VPC-1-routetable-igw.png) |
+| 2 | Created a custom route table with a default route to the NAT Gateway and associated the private subnet. | [View screenshot](screenshots/VPC-1-routetable-nat.png) |
+| 3 | Created and configured the NAT Gateway in the public subnet. | [View screenshot](screenshots/Natgateway.png) |
+| 4 | Tested connectivity to the private EC2 instance via SSH, verified network connectivity using ping where permitted, and confirmed outbound internet access through the NAT Gateway. | [View screenshot](screenshots/natgateway-testing.png) |
+| 5 | Established a VPC Peering connection between the requester and accepter VPCs. | [View screenshot](screenshots/vpc-peering-connection.png) |
+| 6 | Added a route to the second VPC's CIDR block in the first VPC's route table, targeting the VPC Peering connection. | [View screenshot](screenshots/VPC1-peering-routetable.png) |
+| 7 | Added a route to the first VPC's CIDR block in the second VPC's route table, targeting the same VPC Peering connection. | [View screenshot](screenshots/VPC2-peering-routetable.png) |
+| 8 | Tested private connectivity between EC2 instances in the two VPCs using their private IP addresses. | [View screenshot](screenshots/peering-connection-testing.png) |
 
 
 
