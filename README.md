@@ -12,7 +12,6 @@ The objective is to provide outbound internet connectivity to private applicatio
 ## Business Problem
 
 An organization operates application workloads and shared services in separate VPCs. Application instances need outbound internet access for software updates and external APIs, but they should not be directly exposed to the public internet.
-
 <br>
 <br>
 
